@@ -62,9 +62,46 @@
 
     <section id="join">
         <h2>Join the Server</h2>
-        <p>IP: <span class="highlight">185.83.153.15:25566</span> (Java Edition only)</p>
-        <a href="#" class="btn">Join Now</a>
+        <p>IP: <span class="highlight" id="server-ip">185.83.153.15:25566</span> (Java Edition only)</p>
+
+        <!-- Copy IP Button -->
+        <button class="btn" onclick="copyIP()">Copy IP</button>
+
+        <!-- Join Discord Button -->
+        <a href="https://discord.gg/eJuTSHhApH" target="_blank" class="btn">Join Discord</a>
     </section>
+
+    <script>
+    function copyIP() {
+        const ip = document.getElementById('server-ip').textContent;
+        navigator.clipboard.writeText(ip).then(() => {
+            alert('Server IP copied to clipboard: ' + ip);
+        }).catch(err => {
+            alert('Failed to copy IP: ' + err);
+        });
+    }
+    </script>
+    <section id="join">
+        <h2>Join the Server</h2>
+        <p>IP: <span class="highlight" id="server-ip">185.83.153.15:25566</span> (Java Edition only)</p>
+
+        <!-- Copy IP Button -->
+        <button class="btn" onclick="copyIP()">Copy IP</button>
+
+        <!-- Join Discord Button -->
+        <a href="https://discord.gg/eJuTSHhApH" target="_blank" class="btn">Join Discord</a>
+    </section>
+
+    <script>
+    function copyIP() {
+        const ip = document.getElementById('server-ip').textContent;
+        navigator.clipboard.writeText(ip).then(() => {
+            alert('Server IP copied to clipboard: ' + ip);
+        }).catch(err => {
+            alert('Failed to copy IP: ' + err);
+        });
+    }
+    </script>
 
     <footer>
         <p>&copy; 2025 Rivalry SMP. All rights reserved.</p>
