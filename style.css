@@ -8,14 +8,14 @@
 
 /* Body */
 body {
-    background: #1b1b1b;
+    background: #6e2a2a;
     color: #fff;
 }
 
 /* Header */
 header {
     text-align: center;
-    background: #2b2b2b url('images/minecraft-bg.png') no-repeat center/cover;
+    background: #808080 url('images/minecraft-bg.png') no-repeat center/cover;
     padding: 50px 20px;
 }
 
@@ -30,7 +30,7 @@ header {
     }
 
 .highlight {
-    color: #00ff00;
+    color: #ffd800;
 }
 
 /* Navigation */
