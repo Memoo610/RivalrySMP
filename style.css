@@ -1,10 +1,18 @@
-﻿body {
+﻿/* Apply font to entire site */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Press Start 2P', cursive;
+}
+
+/* Body */
+body {
     background: #1b1b1b;
     color: #fff;
 }
 
+/* Header */
 header {
     text-align: center;
     background: #2b2b2b url('images/minecraft-bg.png') no-repeat center/cover;
@@ -25,6 +33,7 @@ header {
     color: #00ff00;
 }
 
+/* Navigation */
 nav {
     background: #111;
 }
@@ -34,7 +43,6 @@ nav {
         justify-content: center;
         list-style: none;
         padding: 10px 0;
-        margin: 0;
     }
 
     nav li {
@@ -51,6 +59,7 @@ nav {
             color: #00ff00;
         }
 
+/* Sections */
 section {
     padding: 50px 20px;
     max-width: 900px;
@@ -67,7 +76,8 @@ ul li {
     margin-bottom: 10px;
 }
 
-.btn {
+/* Buttons (links and buttons look same) */
+.btn, button.btn {
     display: inline-block;
     padding: 15px 25px;
     background: #00ff00;
@@ -76,12 +86,16 @@ ul li {
     font-weight: bold;
     border-radius: 5px;
     transition: transform 0.2s;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
 }
 
-    .btn:hover {
+    .btn:hover, button.btn:hover {
         transform: scale(1.1);
     }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
