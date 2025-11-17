@@ -15,7 +15,7 @@ body {
 /* Header */
 header {
     text-align: center;
-    background: #808080 url('images/minecraft-bg.png') no-repeat center/cover;
+    background: #111 url('images/minecraft-bg.png') no-repeat center/cover;
     padding: 50px 20px;
 }
 
