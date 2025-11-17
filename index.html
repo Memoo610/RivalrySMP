@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rivalry SMP</title>
+    <title>    The Rivalry SMP  </title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
@@ -11,14 +11,14 @@
     <header>
         <img src="images/server-logo.png" alt="Rivalry SMP Logo" class="logo">
         <h1>Rivalry SMP</h1>
-        <p>Lifesteal SMP. Survive. Fight. Steal lives. <span class="highlight">Join the adventure!</span></p>
+        <p>Lifesteal SMP. Survive. Fight. Steal hearts. <span class="highlight">Join the adventure!</span></p>
     </header>
 
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#rules">Rules</a></li>
-            <li><a href="#join">Join</a></li>
+            <li><a href="#join">Join now</a></li>
         </ul>
     </nav>
 
@@ -56,6 +56,7 @@
             <li>CPvP / Anchor PvP is forbidden and will result in a ban.</li>
             <li>No threatening or blackmailing anyone.</li>
             <li>Unfair actions are punishable.</li>
+            <li>Inactivity will lead to removal from the server.</li>
         </ul>
         <p><em>These rules may change at any time. Please review them before joining.</em></p>
     </section>
@@ -72,39 +73,18 @@
     </section>
 
     <script>
-    function copyIP() {
-        const ip = document.getElementById('server-ip').textContent;
-        navigator.clipboard.writeText(ip).then(() => {
-            alert('Server IP copied to clipboard: ' + ip);
-        }).catch(err => {
-            alert('Failed to copy IP: ' + err);
-        });
-    }
-    </script>
-    <section id="join">
-        <h2>Join the Server</h2>
-        <p>IP: <span class="highlight" id="server-ip">185.83.153.15:25566</span> (Java Edition only)</p>
-
-        <!-- Copy IP Button -->
-        <button class="btn" onclick="copyIP()">Copy IP</button>
-
-        <!-- Join Discord Button -->
-        <a href="https://discord.gg/eJuTSHhApH" target="_blank" class="btn">Join Discord</a>
-    </section>
-
-    <script>
-    function copyIP() {
-        const ip = document.getElementById('server-ip').textContent;
-        navigator.clipboard.writeText(ip).then(() => {
-            alert('Server IP copied to clipboard: ' + ip);
-        }).catch(err => {
-            alert('Failed to copy IP: ' + err);
-        });
-    }
+        function copyIP() {
+            const ip = document.getElementById('server-ip').textContent;
+            navigator.clipboard.writeText(ip).then(() => {
+                alert('Server IP copied to clipboard: ' + ip);
+            }).catch(err => {
+                alert('Failed to copy IP: ' + err);
+            });
+        }
     </script>
 
     <footer>
-        <p>&copy; 2025 Rivalry SMP. All rights reserved.</p>
+        <p>&copy; © All rights reserved. Rivalry SMP 2025/</p>
     </footer>
 </body>
 </html>
