@@ -12,10 +12,15 @@ body {
     color: #fff;
 }
 
+body {
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
 /* Header */
 header {
     text-align: center;
-    background: #111 url('images/minecraft-bg.png') no-repeat center/cover;
+    background: #000f url('images/minecraft-bg.png') no-repeat center/cover;
     padding: 50px 20px;
 }
 

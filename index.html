@@ -11,7 +11,7 @@
     <header>
         <img src="images/server-logo.png" alt="Rivalry SMP Logo" class="logo">
         <h1>Rivalry SMP</h1>
-        <p>Lifesteal SMP. Survive. Fight. Steal hearts. <span class="highlight">Join the adventure!</span></p>
+        <p>Lifesteal SMP. Survive. Fight And Steal hearts! <span class="highlight">Join the adventure!</span></p>
     </header>
 
     <nav>
@@ -19,12 +19,13 @@
             <li><a href="#about">About</a></li>
             <li><a href="#rules">Rules</a></li>
             <li><a href="#join">Join now</a></li>
+            <li><a href="#changelog">Changelog</a></li>
         </ul>
     </nav>
 
     <section id="about">
-        <h2>About Rivalry SMP</h2>
-        <p>Rivalry SMP is a hardcore Lifesteal Minecraft server where every fight matters. Players steal hearts from each other to survive and dominate. Recommended Minecraft version: 1.21.10 (any Java version works).</p>
+        <h2>About The Rivalry SMP</h2>
+        <p>The Rivalry SMP is a Lifesteal Minecraft server where every fight matters. Players steal hearts from each other to survive and dominate. Recommended Minecraft version: 1.21.10 (any Java version works).</p>
     </section>
 
     <section id="rules">
@@ -53,12 +54,39 @@
             <li>Read all rules in the dedicated rules channel.</li>
             <li>Saying “admin abuse” on the owner is not prohibited but can result in punishment if rude.</li>
             <li>Griefing spawn is not allowed.</li>
-            <li>CPvP / Anchor PvP is forbidden and will result in a ban.</li>
+            <li>CPvP / Anchor PvP is forbidden and will result in a ban. ( Might Get removed Soon )</li>
             <li>No threatening or blackmailing anyone.</li>
             <li>Unfair actions are punishable.</li>
             <li>Inactivity will lead to removal from the server.</li>
         </ul>
         <p><em>These rules may change at any time. Please review them before joining.</em></p>
+    </section>
+
+    <script>
+        // Original time: 3:30 PM EDT (UTC-4)
+        const eventTime = new Date("2025-01-01T15:30:00-04:00");
+
+        function updateLocalTime() {
+            const options = {
+                hour: '2-digit',
+                minute: '2-digit',
+                timeZoneName: 'short'
+            };
+
+            const localTime = eventTime.toLocaleTimeString([], options);
+            document.getElementById("start-time").textContent = localTime;
+        }
+
+        updateLocalTime();
+    </script>
+
+    <section id="updates">
+        <h2>Latest Updates</h2>
+        <ul>
+            <p>Server starts at: <span id="start-time"></span></p>
+            <li>Staff applications is now open!</li>
+            <li>Added Anti-XRAY</li>
+        </ul>
     </section>
 
     <section id="join">
@@ -84,7 +112,8 @@
     </script>
 
     <footer>
-        <p>&copy; All rights reserved. Rivalry SMP 2025</p>
+        <p>&copy; All rights reserved. The Rivalry SMP 2025</p>
     </footer>
 </body>
 </html>
+
