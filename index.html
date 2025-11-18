@@ -6,6 +6,11 @@
     <title>    The Rivalry SMP  </title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -62,28 +67,9 @@
         <p><em>These rules may change at any time. Please review them before joining.</em></p>
     </section>
 
-    <script>
-        // Original time: 3:30 PM EDT (UTC-4)
-        const eventTime = new Date("2025-01-01T15:30:00-04:00");
-
-        function updateLocalTime() {
-            const options = {
-                hour: '2-digit',
-                minute: '2-digit',
-                timeZoneName: 'short'
-            };
-
-            const localTime = eventTime.toLocaleTimeString([], options);
-            document.getElementById("start-time").textContent = localTime;
-        }
-
-        updateLocalTime();
-    </script>
-
-    <section id="updates">
+    <section id="changelog">
         <h2>Latest Updates</h2>
         <ul>
-            <p>Server starts at: <span id="start-time"></span></p>
             <li>✓ Staff applications is now open!</li>
             <li>✓ Added Anti-XRAY</li>
         </ul>
@@ -98,6 +84,13 @@
 
         <!-- Join Discord Button -->
         <a href="https://discord.gg/eJuTSHhApH" target="_blank" class="btn">Join Discord</a>
+
+        <!-- Server Status Section -->
+        <div id="server-status" style="margin-top:20px;">
+            <h3>Server Status</h3>
+            <p id="status">Checking server...</p>
+            <p id="players"></p>
+        </div>
     </section>
 
     <script>
@@ -109,6 +102,34 @@
                 alert('Failed to copy IP: ' + err);
             });
         }
+
+        async function checkServer() {
+            const ip = "185.83.153.15";
+            const port = "25566";
+
+            try {
+                const response = await fetch(`https://api.mcsrvstat.us/2/${ip}:${port}`);
+                const data = await response.json();
+
+                const statusEl = document.getElementById("status");
+                const playersEl = document.getElementById("players");
+
+                if (data.online) {
+                    statusEl.textContent = "🟢 Server is ONLINE!";
+                    playersEl.textContent = `Players online: ${data.players.online} / ${data.players.max}`;
+                } else {
+                    statusEl.textContent = "🔴 Server is OFFLINE";
+                    playersEl.textContent = "";
+                }
+            } catch (err) {
+                document.getElementById("status").textContent = "⚠️ Error checking server.";
+                console.error(err);
+            }
+        }
+
+        // Check server immediately and then every 30 seconds
+        checkServer();
+        setInterval(checkServer, 30000);
     </script>
 
     <footer>
