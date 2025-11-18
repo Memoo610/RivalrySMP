@@ -10,7 +10,7 @@ RivalrySMP is a Minecraft server that focuses on competitive gameplay, community
 3. Join and start your adventure!
 ### Notes
 - You need to be whitelisted to join the server. Please join our Discord server to request access: [Discord Invite Link](https://discord.gg/eJuTSHhApH)
-- Make sure to read the server rules in the Discord server.
+- Make sure to read the server rules in our [Website](https://rivalrysmp.online/#rules) before playing.
 - Any version of Minecraft Java Edition is supported. but we recommend using the latest version ( 1.21.10 ) for the best experience.
 - Have fun and play fair!
 ## License
