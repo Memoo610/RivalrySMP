@@ -94,6 +94,9 @@
     </section>
 
     <script>
+        // Set this to true if server is in maintenance
+        const maintenance = true; // true = maintenance, false = normal
+
         function copyIP() {
             const ip = document.getElementById('server-ip').textContent;
             navigator.clipboard.writeText(ip).then(() => {
@@ -104,15 +107,22 @@
         }
 
         async function checkServer() {
+            const statusEl = document.getElementById("status");
+            const playersEl = document.getElementById("players");
+
+            // If maintenance is on, show maintenance status
+            if (maintenance) {
+                statusEl.textContent = "🛠️ Server is under maintenance";
+                playersEl.textContent = "";
+                return;
+            }
+
             const ip = "185.83.153.15";
             const port = "25566";
 
             try {
                 const response = await fetch(`https://api.mcsrvstat.us/2/${ip}:${port}`);
                 const data = await response.json();
-
-                const statusEl = document.getElementById("status");
-                const playersEl = document.getElementById("players");
 
                 if (data.online) {
                     statusEl.textContent = "🟢 Server is ONLINE!";
@@ -122,12 +132,13 @@
                     playersEl.textContent = "";
                 }
             } catch (err) {
-                document.getElementById("status").textContent = "⚠️ Error checking server.";
+                statusEl.textContent = "⚠️ Error checking server.";
+                playersEl.textContent = "";
                 console.error(err);
             }
         }
 
-        // Check server immediately and then every 30 seconds
+        // Check server immediately and every 30 seconds
         checkServer();
         setInterval(checkServer, 30000);
     </script>
